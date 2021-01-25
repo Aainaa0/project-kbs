@@ -1,0 +1,25 @@
+public class Movies {
+	private Boolean age;			//true, if above 13
+	private Boolean animaton;
+	private Boolean tv_series;
+	private Boolean completed;
+	private Boolean hollywood;
+	private Boolean family;
+	private Boolean alone;
+	
+	public Movies()
+	{
+		
+	}
+	
+	
+	public Boolean isAge()
+	{
+		return this.age;
+	}
+	
+	public void setAge(Boolean age)
+	{
+		this.age = age;
+	}
+}

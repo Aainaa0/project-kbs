@@ -1,0 +1,64 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class PreferedGenre extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					PreferedGenre frame = new PreferedGenre();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public PreferedGenre() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblPreferedGenre = new JLabel("Prefered genre?");
+		lblPreferedGenre.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblPreferedGenre.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPreferedGenre.setBounds(10, 11, 414, 52);
+		contentPane.add(lblPreferedGenre);
+		
+		JButton btnComedy = new JButton("Comedy");
+		btnComedy.setBounds(161, 112, 106, 33);
+		contentPane.add(btnComedy);
+		
+		JButton btnAction = new JButton("Action");
+		btnAction.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnAction.setBounds(161, 167, 106, 33);
+		contentPane.add(btnAction);
+	}
+
+}

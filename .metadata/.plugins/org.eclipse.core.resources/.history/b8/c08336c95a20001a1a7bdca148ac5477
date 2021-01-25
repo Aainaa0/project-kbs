@@ -1,0 +1,9 @@
+public class Movies {
+	int age;
+	Boolean animaton;
+	Boolean tv_series;
+	Boolean completed;
+	Boolean hollywood;
+	Boolean family;
+	Boolean alone;
+}

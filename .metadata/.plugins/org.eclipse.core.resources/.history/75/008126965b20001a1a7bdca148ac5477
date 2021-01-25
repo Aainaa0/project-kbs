@@ -1,0 +1,14 @@
+public class Movies {
+	private Boolean age;
+	private Boolean animaton;
+	private Boolean tv_series;
+	private Boolean completed;
+	private Boolean hollywood;
+	private Boolean family;
+	private Boolean alone;
+	
+	public void setAge(Boolean age)
+	{
+		
+	}
+}

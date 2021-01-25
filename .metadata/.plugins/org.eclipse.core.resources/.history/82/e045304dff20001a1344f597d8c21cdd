@@ -1,0 +1,189 @@
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+
+import recommendation.Thedragonprince;
+import recommendation.barebear;
+import recommendation.beyblade;
+import recommendation.boboiboy;
+import recommendation.gumball;
+import recommendation.maruko;
+import recommendation.pokemon;
+import recommendation.powerpuffgirl;
+import recommendation.rapunzel;
+import recommendation.shinchan;
+import recommendation.spongebob_squarepants;
+import recommendation.zoidwild;
+
+public class PreferedGenre extends JFrame {
+
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+
+	public PreferedGenre(Movies m) {
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblPreferedGenre = new JLabel("Prefered genre?");
+		lblPreferedGenre.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblPreferedGenre.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPreferedGenre.setBounds(10, 11, 414, 52);
+		contentPane.add(lblPreferedGenre);
+		
+		JButton btnComedy = new JButton("Comedy");
+		btnComedy.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				m.setComedy(true);
+				System.out.println("Comedy : "+ m.isComedy() +" (user want to watch comedy)");
+				
+				if((m.isAge()==true)&&(m.isTv()==true)&&(m.isOngoing()==true)&&(m.isAnimated()==true)&&(m.isHollywood()==true)&&(m.isAlone()==true)&&(m.isComedy()==true))
+					{
+						dispose();
+						spongebob_squarepants movie = new spongebob_squarepants();
+						movie.setLocationRelativeTo(null);
+						movie.setVisible(true);
+					}
+				else if((m.isAge()==true)&&(m.isTv()==true)&&(m.isOngoing()==true)&&(m.isAnimated()==true)&&(m.isHollywood()==true)&&(m.isAlone()==false)&&(m.isPartner()==true)&&(m.isComedy()==true))
+				{
+					dispose();
+					powerpuffgirl movie = new powerpuffgirl();
+					movie.setLocationRelativeTo(null);
+					movie.setVisible(true);
+				}
+				
+				else if((m.isAge()==true)&&(m.isTv()==true)&&(m.isOngoing()==true)&&(m.isAnimated()==true)&&(m.isHollywood()==true)&&(m.isAlone()==false)&&(m.isPartner()==false)&&(m.isComedy()==true))
+				{
+					dispose();
+					barebear movie = new barebear();
+					movie.setLocationRelativeTo(null);
+					movie.setVisible(true);
+				}
+				else if((m.isAge()==true)&&(m.isTv()==true)&&(m.isOngoing()==true)&&(m.isAnimated()==true)&&(m.isHollywood()==false)&&(m.isAlone()==true)&&(m.isComedy()==true))
+				{
+					dispose();
+					zoidwild movie = new zoidwild();
+					movie.setLocationRelativeTo(null);
+					movie.setVisible(true);
+				}
+				else if((m.isAge()==true)&&(m.isTv()==true)&&(m.isOngoing()==true)&&(m.isAnimated()==true)&&(m.isHollywood()==false)&&(m.isAlone()==false)&&(m.isPartner()==true)&&(m.isComedy()==true))
+				{
+					dispose();
+					shinchan movie = new shinchan();
+					movie.setLocationRelativeTo(null);
+					movie.setVisible(true);
+				}
+				else if((m.isAge()==true)&&(m.isTv()==true)&&(m.isOngoing()==true)&&(m.isAnimated()==true)&&(m.isHollywood()==false)&&(m.isAlone()==false)&&(m.isPartner()==false)&&(m.isComedy()==true))
+				{
+					dispose();
+					maruko movie = new maruko();
+					movie.setLocationRelativeTo(null);
+					movie.setVisible(true);
+					
+				}
+				else
+				{
+					System.out.println("Hello world!");
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			}
+		});
+		
+		
+		btnComedy.setBounds(161, 112, 106, 33);
+		contentPane.add(btnComedy);
+		
+		JButton btnAction = new JButton("Action");
+		btnAction.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				m.setComedy(false);
+				System.out.println("Comedy : "+ m.isComedy() +" (user want to watch action)");
+				
+				if((m.isAge()==true)&&(m.isTv()==true)&&(m.isOngoing()==true)&&(m.isAnimated()==true)&&(m.isHollywood()==true)&&(m.isAlone()==true)&&(m.isComedy()==false))
+				{
+					dispose();
+					Thedragonprince movie = new Thedragonprince();
+					movie.setLocationRelativeTo(null);
+					movie.setVisible(true);
+				}
+				else if((m.isAge()==true)&&(m.isTv()==true)&&(m.isOngoing()==true)&&(m.isAnimated()==true)&&(m.isHollywood()==true)&&(m.isAlone()==false)&&(m.isPartner()==true)&&(m.isComedy()==false))
+				{
+					dispose();
+					rapunzel movie = new rapunzel();
+					movie.setLocationRelativeTo(null);
+					movie.setVisible(true);
+				}
+				else if((m.isAge()==true)&&(m.isTv()==true)&&(m.isOngoing()==true)&&(m.isAnimated()==true)&&(m.isHollywood()==true)&&(m.isAlone()==false)&&(m.isPartner()==false)&&(m.isComedy()==false))
+				{
+					dispose();
+					gumball movie = new gumball();
+					movie.setLocationRelativeTo(null);
+					movie.setVisible(true);
+				}
+				else if((m.isAge()==true)&&(m.isTv()==true)&&(m.isOngoing()==true)&&(m.isAnimated()==true)&&(m.isHollywood()==false)&&(m.isAlone()==true)&&(m.isComedy()==false))
+				{
+					dispose();
+					pokemon movie = new pokemon();
+					movie.setLocationRelativeTo(null);
+					movie.setVisible(true);
+
+				}
+				else if((m.isAge()==true)&&(m.isTv()==true)&&(m.isOngoing()==true)&&(m.isAnimated()==true)&&(m.isHollywood()==false)&&(m.isAlone()==false)&&(m.isPartner()==true)&&(m.isComedy()==false))
+				{
+					dispose();
+					boboiboy movie = new boboiboy();
+					movie.setLocationRelativeTo(null);
+					movie.setVisible(true);
+				}
+				
+				else if((m.isAge()==true)&&(m.isTv()==true)&&(m.isOngoing()==true)&&(m.isAnimated()==true)&&(m.isHollywood()==false)&&(m.isAlone()==false)&&(m.isPartner()==false)&&(m.isComedy()==false))
+				{
+					dispose();
+					beyblade movie = new beyblade();
+					movie.setVisible(true);
+					
+				}
+				
+				
+				
+			}
+		});
+		btnAction.setBounds(161, 167, 106, 33);
+		contentPane.add(btnAction);
+	}
+
+}

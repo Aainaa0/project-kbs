@@ -1,0 +1,7 @@
+
+public class MovieRecommend {
+
+	private Movies m = new Movies();
+	
+	
+}

@@ -1,0 +1,64 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Age extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Age frame = new Age();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Age() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblAge = new JLabel("Age category:");
+		lblAge.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAge.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblAge.setBounds(10, 11, 414, 52);
+		contentPane.add(lblAge);
+		
+		JButton btnBelow = new JButton("13<");
+		btnBelow.setBounds(161, 112, 106, 33);
+		contentPane.add(btnBelow);
+		
+		JButton btnAbove = new JButton("13>=");
+		btnAbove.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnAbove.setBounds(161, 167, 106, 33);
+		contentPane.add(btnAbove);
+	}
+}
